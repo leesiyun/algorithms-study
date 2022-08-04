@@ -1,5 +1,11 @@
+import EmptyNumber from "./pages/220804";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <EmptyNumber />
+    </>
+  );
 }
 
 export default App;
