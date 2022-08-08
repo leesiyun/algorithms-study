@@ -76,6 +76,17 @@ var solution = (absolutes, signs) => absolutes.reduce((acc, x, i) => acc + (x * 
 
 <br />
 
+_다른 사람의 풀이를 보고 코드 수정해보기_
+
+```JS
+answer += signs[i] ? absolutes[i] : -absolutes[i]; // 스터디원 코드
+
+signs[i] ? acc + cur : acc - cur  // 내 코드
+acc += signs[i] ? +cur : -cur // 코드 수정하기
+```
+
+<br />
+
 ## 지식 쌓아가기
 
 🔗 [Array.prototype.reduce()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
