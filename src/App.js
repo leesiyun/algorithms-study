@@ -1,17 +1,28 @@
 const App = () => {
-  let numbers = [1, 2, 3, 4, 6, 7, 8, 0];
-  // let numbers = [5, 8, 4, 0, 6, 7, 9];
-  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-  let answer = 0;
+  const constraintCheck = (absolutes, signs) =>
+    absolutes.length >= 1 &&
+    absolutes.length <= 1000 &&
+    absolutes.length === signs.length;
 
-  arr.map((value) => {
-    if (!numbers.includes(value)) answer += value;
-    return answer;
-  });
+  const solution = (absolutes, signs) =>
+    absolutes.reduce((acc, cur, i) => (signs[i] ? acc + cur : acc - cur), 0);
+
+  const main = () => {
+    const absolutes = [4, 7, 12];
+    const signs = [true, false, true];
+
+    const answer = constraintCheck(absolutes, signs)
+      ? solution(absolutes, signs)
+      : "constraint violated";
+
+    console.log(answer);
+  };
+
+  main();
 
   return (
     <>
-      <div>{answer}</div>
+      <div></div>
     </>
   );
 };
