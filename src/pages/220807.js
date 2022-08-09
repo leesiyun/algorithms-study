@@ -24,7 +24,7 @@ function Add() {
     answer = 0;
 
     // signs[i]가 참 일 경우 absolutes[i]를 answer에 더한다
-    // signs[i]가 거짓 일 경우 -absolutes[i] 를 answer 더한다
+    // signs[i]가 거짓 일 경우 -absolutes[i]를 answer에 더한다
     for (let i = 0; i < absolutes.length; i++) {
       answer += signs[i] ? absolutes[i] : -absolutes[i];
     }
