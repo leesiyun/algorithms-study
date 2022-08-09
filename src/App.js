@@ -1,21 +1,15 @@
 const App = () => {
-  const constraintCheck = (absolutes, signs) =>
-    absolutes.length >= 1 &&
-    absolutes.length <= 1000 &&
-    absolutes.length === signs.length;
-
-  const solution = (absolutes, signs) =>
-    absolutes.reduce((acc, cur, i) => (signs[i] ? acc + cur : acc - cur), 0);
+  // const solution = (a, b) => a.reduce((acc, cur, i) => (acc += cur * b[i]), 0);
 
   const main = () => {
-    const absolutes = [4, 7, 12];
-    const signs = [true, false, true];
+    const a = [1, 2, 3, 4];
+    //const a = [-1, 0, 1];
+    const b = [-3, -1, 0, 2];
+    //const b = [1, 0, -1];
 
-    const answer = constraintCheck(absolutes, signs)
-      ? solution(absolutes, signs)
-      : "constraint violated";
+    const answer = (a, b) => a.reduce((acc, cur, i) => acc + cur * b[i], 0);
 
-    console.log(answer);
+    console.log(answer(a, b));
   };
 
   main();
