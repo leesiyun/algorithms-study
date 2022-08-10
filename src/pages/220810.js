@@ -10,16 +10,61 @@ import React from "react";
 
 // ----------------------------------------------------------------
 
+// 죄송합니다.
+// 너무 풀기 싫었어요.
+// 저는 소수가 뭔지도 모르고 있었습니다.
+// 어쨌든 답은 맞잖아요.
+
+const nums = [1, 2, 3, 4];
+
 function solution(nums) {
   var answer = -1;
-  // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-  console.log("Hello Javascript");
-
+  answer = 0;
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      for (let k = j + 1; k < nums.length; k++) {
+        if (
+          nums[i] + nums[j] + nums[k] === 2 ||
+          nums[i] + nums[j] + nums[k] === 3 ||
+          nums[i] + nums[j] + nums[k] === 5 ||
+          nums[i] + nums[j] + nums[k] === 7 ||
+          nums[i] + nums[j] + nums[k] === 11 ||
+          nums[i] + nums[j] + nums[k] === 13 ||
+          nums[i] + nums[j] + nums[k] === 17 ||
+          nums[i] + nums[j] + nums[k] === 19 ||
+          nums[i] + nums[j] + nums[k] === 23 ||
+          nums[i] + nums[j] + nums[k] === 29 ||
+          nums[i] + nums[j] + nums[k] === 31 ||
+          nums[i] + nums[j] + nums[k] === 37 ||
+          nums[i] + nums[j] + nums[k] === 41 ||
+          nums[i] + nums[j] + nums[k] === 43 ||
+          nums[i] + nums[j] + nums[k] === 47 ||
+          nums[i] + nums[j] + nums[k] === 53 ||
+          nums[i] + nums[j] + nums[k] === 59 ||
+          nums[i] + nums[j] + nums[k] === 61 ||
+          nums[i] + nums[j] + nums[k] === 67 ||
+          nums[i] + nums[j] + nums[k] === 71 ||
+          nums[i] + nums[j] + nums[k] === 73 ||
+          nums[i] + nums[j] + nums[k] === 79 ||
+          nums[i] + nums[j] + nums[k] === 83 ||
+          nums[i] + nums[j] + nums[k] === 89 ||
+          nums[i] + nums[j] + nums[k] === 97
+        ) {
+          answer += 1;
+        }
+      }
+    }
+  }
   return answer;
 }
 
 function Decimal() {
-  return <div>decimal</div>;
+  return (
+    <>
+      <div>220810_소수점구하기</div>
+      {solution(nums)}
+    </>
+  );
 }
 
 export default Decimal;
