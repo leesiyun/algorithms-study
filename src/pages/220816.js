@@ -37,11 +37,13 @@ function solution(nums = []) {
   // 중복 제거
   const poketmon = new Set(nums);
 
-  // test
+  // test : set의 경우 길이를 확인할 때 length가 아니고 size
   console.log("test poketmon -----> ", poketmon.size);
 
+  // 중복제거 된 포켓몬의 길이가 최대값 보다 클 때 최대값 반환
   if (poketmon.size > answer) {
     return answer;
+    // 아니면 뻐큐 먹어
   } else {
     return <h1>ㅗ</h1>;
   }
