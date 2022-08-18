@@ -16,11 +16,15 @@ const participant = ["leo", "kiki", "eden"];
 // 완주한 선수
 const completion = ["eden", "kiki"];
 
+// 죄송합니다. 답지 봤어요 겁나 어렵네요.
 function solution(participant = [], completion = []) {
-  var answer = "";
-  // 되는게 없네요 내일 다시 할게요
-
-  return answer;
+  participant.sort();
+  completion.sort();
+  for (let i = 0; i < participant.length; i++) {
+    if (participant[i] !== completion[i]) {
+      return participant[i];
+    }
+  }
 }
 
 function Marathon() {
