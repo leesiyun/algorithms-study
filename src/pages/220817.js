@@ -17,9 +17,12 @@ const participant = ["leo", "kiki", "eden"];
 const completion = ["eden", "kiki"];
 
 // 죄송합니다. 답지 봤어요 겁나 어렵네요.
+// 대체 이게 해시랑 무슨 상관이죠.
 function solution(participant = [], completion = []) {
+  // 정렬
   participant.sort();
   completion.sort();
+  // 반복문
   for (let i = 0; i < participant.length; i++) {
     if (participant[i] !== completion[i]) {
       return participant[i];
@@ -31,6 +34,7 @@ function Marathon() {
   return (
     <>
       <div>220817_완주하지 못한 마라톤 선수</div>
+      <strong>완주를 못 한 자식 : </strong>
       {solution(participant, completion)}
     </>
   );
