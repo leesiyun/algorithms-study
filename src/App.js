@@ -4,6 +4,7 @@ import Inner from "./pages/220809";
 import Decimal from "./pages/220810";
 import Poketmon from "./pages/220816";
 import Marathon from "./pages/220817";
+import K from "./pages/220823";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       <Poketmon />
       <p>-----------------------------------------</p>
       <Marathon />
+      <p>-----------------------------------------</p>
+      <K />
     </>
   );
 }
